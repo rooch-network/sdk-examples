@@ -1,11 +1,11 @@
 # listStates
 
-## Example
+## 示例
 
 ```ts
 import { getRoochNodeUrl, RoochClient } from '@roochnetwork/rooch-sdk'
 
-const NETWORK = 'mainnet' // 'mainnet' or 'testnet'
+const NETWORK = 'mainnet' // 'mainnet' 或 'testnet'
 
 async function main() {
   const client = new RoochClient({
@@ -16,27 +16,27 @@ async function main() {
     // accessPath: '/resource/0x3'
     accessPath: '/resource/0xc87604825b720bc01434686db6001c0f69122856edc446fa6c367834fc8b21e9'
   });
-  console.log('Transaction Info:', state);
-  console.log('\nTransaction Info:', state.data[0]);
-  console.log('\nCounter value:', state.data[0].state.decoded_value?.value);
+  console.log('交易信息:', state);
+  console.log('\n交易信息:', state.data[0]);
+  console.log('\n计数器值:', state.data[0].state.decoded_value?.value);
 }
 
 main()
 ```
 
-## Run
+## 运行
 
 ```bash
-# Install dependencies
+# 安装依赖
 npm i
 
-# Run
+# 运行
 npm start
 
 > liststates@1.0.0 start
 > ts-node src/index.ts
 
-Transaction Info: {
+交易信息: {
   data: [
     {
       field_key: '0x006abb3c49e638d9c4ad3edb394d46c007bfe985648d627d3aee52f90eab8000',
@@ -47,7 +47,7 @@ Transaction Info: {
   has_next_page: false
 }
 
-Transaction Info: {
+交易信息: {
   field_key: '0x006abb3c49e638d9c4ad3edb394d46c007bfe985648d627d3aee52f90eab8000',
   state: {
     id: '0xc87604825b720bc01434686db6001c0f69122856edc446fa6c367834fc8b21e9006abb3c49e638d9c4ad3edb394d46c007bfe985648d627d3aee52f90eab8000',
@@ -69,7 +69,7 @@ Transaction Info: {
   }
 }
 
-Counter value: {
+计数器值: {
   name: '0xc87604825b720bc01434686db6001c0f69122856edc446fa6c367834fc8b21e9::quick_start_counter::Counter',
   value: {
     abilities: 8,
@@ -79,8 +79,8 @@ Counter value: {
 }
 ```
 
-## Access Path
+## 访问路径
 
-Common access path patterns:
+常见的访问路径模式：
 
-- Only `/resource/<address>` - For resources
+- 仅 `/resource/<address>` - 用于资源
