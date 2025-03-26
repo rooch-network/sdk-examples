@@ -5,7 +5,7 @@
 ```ts
 import { getRoochNodeUrl, RoochClient } from '@roochnetwork/rooch-sdk'
 
-const NETWORK = 'mainnet' // 'mainnet' or 'testnet'
+const NETWORK = 'mainnet' // '主网' 或 '测试网'
 
 async function main() {
   const client = new RoochClient({
@@ -19,8 +19,8 @@ async function main() {
     cursor: null,
     limit: "10",
   });
-  console.log('UTXO Query Results:', utxo);
-  console.log('Total UTXOs:', utxo.data.length)
+  console.log('UTXO 查询结果:', utxo);
+  console.log('UTXO 总数:', utxo.data.length)
 
   // 遍历 UTXO 数据
   utxo.data.forEach((utxo, index) => {
@@ -51,7 +51,7 @@ npm start
 > queryutxo@1.0.0 start
 > ts-node src/index.ts
 
-UTXO Query Results: {
+UTXO 查询结果: {
   data: [
     {
       id: '0xf74d177bfec2d8de0c4893f6502d3e5b55f12f75e158d53b035dcbe33782ef1695d422fbf96fa4956df0e9946fa17467264d4813108dc4d136fe419411e3cbe0',
@@ -197,105 +197,104 @@ UTXO Query Results: {
   next_cursor: { tx_order: '78382037', state_index: '5' },
   has_next_page: true
 }
-Total UTXOs: 10
+UTXO 总数: 10
 
 UTXO #1:
-Owner: rooch1p8ufstjnfvm80x5n0sjjx8nexapy480z3dpaj77y8ye60hhpph9qn70wgl
-Bitcoin Address: bc1ql49ydapnjafl5t2cp9zqpjwe6pdgmxy98859v2
-UTXO Details:
-- TxID: 0x3345d48e1a28834069134d16eaf8f20f884600265be83cf6828095e9932b6660
-- Bitcoin TxID: 60662b93e9958082f63ce85b260046880ff2f8ea164d13694083281a8ed44533
-- Vout: 0
-- Value (sats): 546
-- Seals: {}
+所有者: rooch1p8ufstjnfvm80x5n0sjjx8nexapy480z3dpaj77y8ye60hhpph9qn70wgl
+比特币地址: bc1ql49ydapnjafl5t2cp9zqpjwe6pdgmxy98859v2
+UTXO 详情:
+- 交易 ID (TxID): 0x3345d48e1a28834069134d16eaf8f20f884600265be83cf6828095e9932b6660
+- 比特币交易 ID: 60662b93e9958082f63ce85b260046880ff2f8ea164d13694083281a8ed44533
+- 输出索引 (Vout): 0
+- 数值 (聪): 546
+- 封印 (Seals): {}
 
 UTXO #2:
-Owner: rooch1p8ufstjnfvm80x5n0sjjx8nexapy480z3dpaj77y8ye60hhpph9qn70wgl
-Bitcoin Address: bc1ql49ydapnjafl5t2cp9zqpjwe6pdgmxy98859v2
-UTXO Details:
-- TxID: 0xd1cedb4a118da59d554d439e6db42addc8fc31d31f8ec1227ebe4038417d77cf
-- Bitcoin TxID: cf777d413840be7e22c18e1fd331fcc8dd2ab46d9e434d559da58d114adbced1
-- Vout: 0
-- Value (sats): 546
-- Seals: {}
+所有者: rooch1p8ufstjnfvm80x5n0sjjx8nexapy480z3dpaj77y8ye60hhpph9qn70wgl
+比特币地址: bc1ql49ydapnjafl5t2cp9zqpjwe6pdgmxy98859v2
+UTXO 详情:
+- 交易 ID (TxID): 0xd1cedb4a118da59d554d439e6db42addc8fc31d31f8ec1227ebe4038417d77cf
+- 比特币交易 ID: cf777d413840be7e22c18e1fd331fcc8dd2ab46d9e434d559da58d114adbced1
+- 输出索引 (Vout): 0
+- 数值 (聪): 546
+- 封印 (Seals): {}
 
 UTXO #3:
-Owner: rooch1p8ufstjnfvm80x5n0sjjx8nexapy480z3dpaj77y8ye60hhpph9qn70wgl
-Bitcoin Address: bc1ql49ydapnjafl5t2cp9zqpjwe6pdgmxy98859v2
-UTXO Details:
-- TxID: 0xf1edacba35c22512fcf3b7f1873f5b6ef226bf1daa947c99ccba0649e77867ed
-- Bitcoin TxID: ed6778e74906bacc997c94aa1dbf26f26e5b3f87f1b7f3fc1225c235baacedf1
-- Vout: 19
-- Value (sats): 34101
-- Seals: {}
+所有者: rooch1p8ufstjnfvm80x5n0sjjx8nexapy480z3dpaj77y8ye60hhpph9qn70wgl
+比特币地址: bc1ql49ydapnjafl5t2cp9zqpjwe6pdgmxy98859v2
+UTXO 详情:
+- 交易 ID (TxID): 0xf1edacba35c22512fcf3b7f1873f5b6ef226bf1daa947c99ccba0649e77867ed
+- 比特币交易 ID: ed6778e74906bacc997c94aa1dbf26f26e5b3f87f1b7f3fc1225c235baacedf1
+- 输出索引 (Vout): 19
+- 数值 (聪): 34101
+- 封印 (Seals): {}
 
 UTXO #4:
-Owner: rooch1p8ufstjnfvm80x5n0sjjx8nexapy480z3dpaj77y8ye60hhpph9qn70wgl
-Bitcoin Address: bc1ql49ydapnjafl5t2cp9zqpjwe6pdgmxy98859v2
-UTXO Details:
-- TxID: 0xfde1014e5455493955f74bfbfe706604254851c5fcf9e9f039cf8195f20dcdda
-- Bitcoin TxID: dacd0df29581cf39f0e9f9fcc5514825046670fefb4bf755394955544e01e1fd
-- Vout: 0
-- Value (sats): 546
-- Seals: {}
+所有者: rooch1p8ufstjnfvm80x5n0sjjx8nexapy480z3dpaj77y8ye60hhpph9qn70wgl
+比特币地址: bc1ql49ydapnjafl5t2cp9zqpjwe6pdgmxy98859v2
+UTXO 详情:
+- 交易 ID (TxID): 0xfde1014e5455493955f74bfbfe706604254851c5fcf9e9f039cf8195f20dcdda
+- 比特币交易 ID: dacd0df29581cf39f0e9f9fcc5514825046670fefb4bf755394955544e01e1fd
+- 输出索引 (Vout): 0
+- 数值 (聪): 546
+- 封印 (Seals): {}
 
 UTXO #5:
-Owner: rooch1p8ufstjnfvm80x5n0sjjx8nexapy480z3dpaj77y8ye60hhpph9qn70wgl
-Bitcoin Address: bc1ql49ydapnjafl5t2cp9zqpjwe6pdgmxy98859v2
-UTXO Details:
-- TxID: 0x6a16716924bfb5fd4065f7900e1de1ab1690bf5d8ba5ed783ab18b2e9c74a00b
-- Bitcoin TxID: 0ba0749c2e8bb13a78eda58b5dbf9016abe11d0e90f76540fdb5bf246971166a
-- Vout: 31
-- Value (sats): 10000
-- Seals: {}
+所有者: rooch1p8ufstjnfvm80x5n0sjjx8nexapy480z3dpaj77y8ye60hhpph9qn70wgl
+比特币地址: bc1ql49ydapnjafl5t2cp9zqpjwe6pdgmxy98859v2
+UTXO 详情:
+- 交易 ID (TxID): 0x6a16716924bfb5fd4065f7900e1de1ab1690bf5d8ba5ed783ab18b2e9c74a00b
+- 比特币交易 ID: 0ba0749c2e8bb13a78eda58b5dbf9016abe11d0e90f76540fdb5bf246971166a
+- 输出索引 (Vout): 31
+- 数值 (聪): 10000
+- 封印 (Seals): {}
 
 UTXO #6:
-Owner: rooch1p8ufstjnfvm80x5n0sjjx8nexapy480z3dpaj77y8ye60hhpph9qn70wgl
-Bitcoin Address: bc1ql49ydapnjafl5t2cp9zqpjwe6pdgmxy98859v2
-UTXO Details:
-- TxID: 0xe14322d95b2ba3576b9e4db4c37b7b6a66349ccde938c1bbae40e8c4647278a9
-- Bitcoin TxID: a9787264c4e840aebbc138e9cd9c34666a7b7bc3b44d9e6b57a32b5bd92243e1
-- Vout: 52
-- Value (sats): 546
-- Seals: {}
+所有者: rooch1p8ufstjnfvm80x5n0sjjx8nexapy480z3dpaj77y8ye60hhpph9qn70wgl
+比特币地址: bc1ql49ydapnjafl5t2cp9zqpjwe6pdgmxy98859v2
+UTXO 详情:
+- 交易 ID (TxID): 0xe14322d95b2ba3576b9e4db4c37b7b6a66349ccde938c1bbae40e8c4647278a9
+- 比特币交易 ID: a9787264c4e840aebbc138e9cd9c34666a7b7bc3b44d9e6b57a32b5bd92243e1
+- 输出索引 (Vout): 52
+- 数值 (聪): 546
+- 封印 (Seals): {}
 
 UTXO #7:
-Owner: rooch1p8ufstjnfvm80x5n0sjjx8nexapy480z3dpaj77y8ye60hhpph9qn70wgl
-Bitcoin Address: bc1ql49ydapnjafl5t2cp9zqpjwe6pdgmxy98859v2
-UTXO Details:
-- TxID: 0xe14322d95b2ba3576b9e4db4c37b7b6a66349ccde938c1bbae40e8c4647278a9
-- Bitcoin TxID: a9787264c4e840aebbc138e9cd9c34666a7b7bc3b44d9e6b57a32b5bd92243e1
-- Vout: 51
-- Value (sats): 546
-- Seals: {}
+所有者: rooch1p8ufstjnfvm80x5n0sjjx8nexapy480z3dpaj77y8ye60hhpph9qn70wgl
+比特币地址: bc1ql49ydapnjafl5t2cp9zqpjwe6pdgmxy98859v2
+UTXO 详情:
+- 交易 ID (TxID): 0xe14322d95b2ba3576b9e4db4c37b7b6a66349ccde938c1bbae40e8c4647278a9
+- 比特币交易 ID: a9787264c4e840aebbc138e9cd9c34666a7b7bc3b44d9e6b57a32b5bd92243e1
+- 输出索引 (Vout): 51
+- 数值 (聪): 546
+- 封印 (Seals): {}
 
 UTXO #8:
-Owner: rooch1p8ufstjnfvm80x5n0sjjx8nexapy480z3dpaj77y8ye60hhpph9qn70wgl
-Bitcoin Address: bc1ql49ydapnjafl5t2cp9zqpjwe6pdgmxy98859v2
-UTXO Details:
-- TxID: 0xe14322d95b2ba3576b9e4db4c37b7b6a66349ccde938c1bbae40e8c4647278a9
-- Bitcoin TxID: a9787264c4e840aebbc138e9cd9c34666a7b7bc3b44d9e6b57a32b5bd92243e1
-- Vout: 50
-- Value (sats): 546
-- Seals: {}
+所有者: rooch1p8ufstjnfvm80x5n0sjjx8nexapy480z3dpaj77y8ye60hhpph9qn70wgl
+比特币地址: bc1ql49ydapnjafl5t2cp9zqpjwe6pdgmxy98859v2
+UTXO 详情:
+- 交易 ID (TxID): 0xe14322d95b2ba3576b9e4db4c37b7b6a66349ccde938c1bbae40e8c4647278a9
+- 比特币交易 ID: a9787264c4e840aebbc138e9cd9c34666a7b7bc3b44d9e6b57a32b5bd92243e1
+- 输出索引 (Vout): 50
+- 数值 (聪): 546
+- 封印 (Seals): {}
 
 UTXO #9:
-Owner: rooch1p8ufstjnfvm80x5n0sjjx8nexapy480z3dpaj77y8ye60hhpph9qn70wgl
-Bitcoin Address: bc1ql49ydapnjafl5t2cp9zqpjwe6pdgmxy98859v2
-UTXO Details:
-- TxID: 0xe14322d95b2ba3576b9e4db4c37b7b6a66349ccde938c1bbae40e8c4647278a9
-- Bitcoin TxID: a9787264c4e840aebbc138e9cd9c34666a7b7bc3b44d9e6b57a32b5bd92243e1
-- Vout: 54
-- Value (sats): 546
-- Seals: {}
+所有者: rooch1p8ufstjnfvm80x5n0sjjx8nexapy480z3dpaj77y8ye60hhpph9qn70wgl
+比特币地址: bc1ql49ydapnjafl5t2cp9zqpjwe6pdgmxy98859v2
+UTXO 详情:
+- 交易 ID (TxID): 0xe14322d95b2ba3576b9e4db4c37b7b6a66349ccde938c1bbae40e8c4647278a9
+- 比特币交易 ID: a9787264c4e840aebbc138e9cd9c34666a7b7bc3b44d9e6b57a32b5bd92243e1
+- 输出索引 (Vout): 54
+- 数值 (聪): 546
+- 封印 (Seals): {}
 
 UTXO #10:
-Owner: rooch1p8ufstjnfvm80x5n0sjjx8nexapy480z3dpaj77y8ye60hhpph9qn70wgl
-Bitcoin Address: bc1ql49ydapnjafl5t2cp9zqpjwe6pdgmxy98859v2
-UTXO Details:
-- TxID: 0xe14322d95b2ba3576b9e4db4c37b7b6a66349ccde938c1bbae40e8c4647278a9
-- Bitcoin TxID: a9787264c4e840aebbc138e9cd9c34666a7b7bc3b44d9e6b57a32b5bd92243e1
-- Vout: 53
-- Value (sats): 546
-- Seals: {}
-```
+所有者: rooch1p8ufstjnfvm80x5n0sjjx8nexapy480z3dpaj77y8ye60hhpph9qn70wgl
+比特币地址: bc1ql49ydapnjafl5t2cp9zqpjwe6pdgmxy98859v2
+UTXO 详情:
+- 交易 ID (TxID): 0xe14322d95b2ba3576b9e4db4c37b7b6a66349ccde938c1bbae40e8c4647278a9
+- 比特币交易 ID: a9787264c4e840aebbc138e9cd9c34666a7b7bc3b44d9e6b57a32b5bd92243e1
+- 输出索引 (Vout): 53
+- 数值 (聪): 546
+- 封印 (Seals): {}
